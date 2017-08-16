@@ -1,8 +1,10 @@
 ## HttpRequest
 
 -------
+
 ###  整体思想:
-![HttpRequest](media/HttpRequest-1.png)
+![](HttpRequest.png)
+
 
 ### example code:
 1.建议在AppLication onCreate注册 对应模块的请求适配器 
