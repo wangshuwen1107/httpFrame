@@ -26,7 +26,7 @@ public class MediaRequestAdapter extends HttpRequestAdapter<MediaResponse> {
     @Override
     public List<String> supportHostList() {
         List<String> hostList = new ArrayList<>();
-        hostList.add("yourHost");
+        hostList.add("rokid.oss-cn-qingdao.aliyuncs.com");
         return hostList;
     }
 

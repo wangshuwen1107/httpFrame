@@ -38,15 +38,12 @@ public class HttpRequest {
 
     private boolean isDebug = false;
     private OkHttpClient sslClient;
-    private OkHttpClient tlsClient;
 
     private static Map<String, HttpRequestAdapter> httpRequestAdapterMap;
 
     private HttpRequest() {
         buildSSLClient();
-
         respHandler = new Handler(Looper.getMainLooper());
-        httpRequestAdapterMap = new HashMap<>();
     }
 
     public static HttpRequest getInstance() {
@@ -58,10 +55,6 @@ public class HttpRequest {
             }
         }
         return instance;
-    }
-
-    public static void initialize() {
-        getInstance();
     }
 
     public static void openDebug() {
@@ -280,7 +273,7 @@ public class HttpRequest {
                 .connectTimeout(CONNECT_TIMEOUT, TimeUnit.SECONDS);
 
         sslClient = builder.build();
-
     }
+
 }
 

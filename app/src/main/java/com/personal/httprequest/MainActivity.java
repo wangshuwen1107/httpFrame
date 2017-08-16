@@ -12,6 +12,8 @@ import com.personal.lib.util.Logger;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String URl= "http://rokid.oss-cn-qingdao.aliyuncs.com/app/old/updateInfo.json";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,9 +21,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void postRequest(View view) {
-        Logger.i("post Request is called ");
         HttpRequest.post()
-                .url("your request url")
+                .url(URl)
                 .param("key","value")
                 .body("key", "value")
                 .build()
@@ -41,13 +42,13 @@ public class MainActivity extends AppCompatActivity {
     public void getRequest(View view) {
         Logger.i("get Request is called ");
         HttpRequest.get()
-                .url("your request url")
-                .param("key","value")
+                .url(URl)
+                .param("key", "value")
                 .build()
                 .enqueue(MediaResponse.class, new HttpCallback<MediaResponse>() {
                     @Override
                     public void onSucceed(MediaResponse data) {
-                        Logger.d("get request is success");
+                        Logger.d("get request is success ");
                     }
 
                     @Override

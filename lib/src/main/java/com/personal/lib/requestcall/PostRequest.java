@@ -3,7 +3,7 @@ package com.personal.lib.requestcall;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
 
-import com.rokid.mobile.lib.base.util.Logger;
+import com.personal.lib.util.Logger;
 
 import java.util.HashMap;
 

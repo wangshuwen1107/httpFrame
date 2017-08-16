@@ -21,6 +21,7 @@ public abstract class HttpRequestAdapter<T> {
 
     public abstract HashMap<String, String> commonBodys();
 
+    //具体解析方法
     public abstract T parseResponseBody(ResponseBody responseBody, Type typeOfT) throws IOException;
 
     //同步执行response
